@@ -1,0 +1,9 @@
+# Place your images here
+# 
+# Recommended images to add:
+# - profile.jpg (for About section - 500x500px recommended)
+# - project images for each project in Projects section (800x600px recommended)
+#
+# Current implementation uses placeholder images from Unsplash.
+# Replace the Image src URLs in components/sections/About.tsx and 
+# components/sections/Projects.tsx with your actual images.
