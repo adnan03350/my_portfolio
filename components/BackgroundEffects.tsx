@@ -19,14 +19,18 @@ export default function BackgroundEffects() {
 
     containerRef.current.appendChild(canvas);
 
-    // Gradient mesh animation
+    // Gradient mesh animation - subtle overlay only
     let time = 0;
     const animate = () => {
       time += 0.005;
+      // Clear canvas first
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Very subtle gradient overlay
       const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-      gradient.addColorStop(0, `rgba(168, 85, 247, ${0.1 + Math.sin(time) * 0.05})`);
-      gradient.addColorStop(0.5, `rgba(6, 182, 212, ${0.1 + Math.cos(time) * 0.05})`);
-      gradient.addColorStop(1, `rgba(59, 130, 246, ${0.1 + Math.sin(time * 1.5) * 0.05})`);
+      gradient.addColorStop(0, `rgba(168, 85, 247, ${0.03 + Math.sin(time) * 0.02})`);
+      gradient.addColorStop(0.5, `rgba(6, 182, 212, ${0.03 + Math.cos(time) * 0.02})`);
+      gradient.addColorStop(1, `rgba(59, 130, 246, ${0.03 + Math.sin(time * 1.5) * 0.02})`);
 
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -102,7 +106,7 @@ export default function BackgroundEffects() {
   }, []);
 
   return (
-    <div ref={containerRef} className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+    <div ref={containerRef} className="fixed inset-0 -z-10 overflow-hidden pointer-events-none bg-gray-950">
       {/* Noise overlay */}
       <div
         className="absolute inset-0 opacity-[0.03]"
