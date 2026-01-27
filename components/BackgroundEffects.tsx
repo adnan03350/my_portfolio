@@ -10,34 +10,7 @@ export default function BackgroundEffects() {
   useEffect(() => {
     if (!containerRef.current) return;
 
-    // Create animated gradient mesh
-    const canvas = document.createElement("canvas");
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
-
-    containerRef.current.appendChild(canvas);
-
-    // Gradient mesh animation - subtle overlay only
-    let time = 0;
-    const animate = () => {
-      time += 0.005;
-      // Clear canvas first
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      // Very subtle gradient overlay
-      const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-      gradient.addColorStop(0, `rgba(168, 85, 247, ${0.03 + Math.sin(time) * 0.02})`);
-      gradient.addColorStop(0.5, `rgba(6, 182, 212, ${0.03 + Math.cos(time) * 0.02})`);
-      gradient.addColorStop(1, `rgba(59, 130, 246, ${0.03 + Math.sin(time * 1.5) * 0.02})`);
-
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      requestAnimationFrame(animate);
-    };
-    animate();
+    // Removed canvas gradient - keeping only floating orbs for subtle effect
 
     // Floating orbs
     const orbs = orbsRef.current;
@@ -99,9 +72,6 @@ export default function BackgroundEffects() {
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
-      if (canvas.parentNode) {
-        canvas.parentNode.removeChild(canvas);
-      }
     };
   }, []);
 
@@ -129,10 +99,10 @@ export default function BackgroundEffects() {
             top: `${Math.random() * 100}%`,
             background:
               i % 3 === 0
-                ? "radial-gradient(circle, rgba(168, 85, 247, 0.3), transparent)"
+                ? "radial-gradient(circle, rgba(168, 85, 247, 0.1), transparent)"
                 : i % 3 === 1
-                ? "radial-gradient(circle, rgba(6, 182, 212, 0.3), transparent)"
-                : "radial-gradient(circle, rgba(59, 130, 246, 0.3), transparent)",
+                ? "radial-gradient(circle, rgba(6, 182, 212, 0.1), transparent)"
+                : "radial-gradient(circle, rgba(59, 130, 246, 0.1), transparent)",
           }}
         />
       ))}
