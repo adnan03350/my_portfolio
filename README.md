@@ -1,4 +1,4 @@
-# Adnan Hameed - Portfolio Website
+# Adnan Hameed - Portfolio Website (Next.js)
 
 A high-end, professional portfolio website for Adnan Hameed, CEO & Founder of Aizentra Labs. Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
 
