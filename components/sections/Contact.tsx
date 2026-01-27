@@ -43,7 +43,7 @@ export default function Contact() {
             Get In Touch
           </h2>
           <p className="text-xl text-gray-400 text-center mb-16 max-w-2xl mx-auto">
-            Interested in collaborating, discussing AI projects, or learning more about Aizentra Labs? I'd love to hear from you.
+            Interested in collaborating, discussing AI projects, or learning more about Aizentra Labs? I&apos;d love to hear from you.
           </p>
 
           <div className="grid md:grid-cols-2 gap-12">
@@ -56,10 +56,10 @@ export default function Contact() {
               className="space-y-6"
             >
               <div className="glass rounded-xl p-6">
-                <h3 className="text-2xl font-semibold mb-4 gradient-text">Let's Connect</h3>
+                <h3 className="text-2xl font-semibold mb-4 gradient-text">Let&apos;s Connect</h3>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  Whether you're looking to collaborate on an AI project, need consulting services, or want to
-                  explore opportunities with Aizentra Labs, I'm always open to meaningful conversations.
+                  Whether you&apos;re looking to collaborate on an AI project, need consulting services, or want to
+                  explore opportunities with Aizentra Labs, I&apos;m always open to meaningful conversations.
                 </p>
                 <div className="space-y-4">
                   <a

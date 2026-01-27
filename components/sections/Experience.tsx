@@ -93,7 +93,7 @@ export default function Experience() {
             <p className="text-lg text-gray-300 leading-relaxed text-center max-w-4xl mx-auto">
               As CEO of Aizentra Labs, I believe in combining technical excellence with strategic vision. My
               approach to leadership emphasizes innovation, continuous learning, and delivering real-world impact.
-              I'm committed to building AI solutions that not only push technological boundaries but also create
+              I&apos;m committed to building AI solutions that not only push technological boundaries but also create
               meaningful value for our clients and contribute to the advancement of the AI field as a whole.
             </p>
           </motion.div>

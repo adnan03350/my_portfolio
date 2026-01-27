@@ -129,7 +129,7 @@ export default function Testimonials() {
                         transition={{ delay: 0.3 }}
                         className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed mb-6 sm:mb-8 italic"
                       >
-                        "{testimonial.text}"
+                        &ldquo;{testimonial.text}&rdquo;
                       </motion.p>
 
                       {/* Divider */}

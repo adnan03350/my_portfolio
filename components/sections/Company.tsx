@@ -118,7 +118,7 @@ export default function Company() {
               Aizentra Labs is dedicated to advancing the field of artificial intelligence through cutting-edge
               research and practical applications. We specialize in computer vision, deep learning, and medical AI,
               delivering solutions that combine academic rigor with real-world impact. Our team of expert engineers
-              and researchers work collaboratively to push the boundaries of what's possible with AI, creating
+              and researchers work collaboratively to push the boundaries of what&apos;s possible with AI, creating
               products that are both innovative and production-ready.
             </p>
           </motion.div>
