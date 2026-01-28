@@ -49,7 +49,7 @@ export default function Navbar() {
         >
           <div className="relative w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 xl:w-32 xl:h-32">
             <Image
-              src={scrolled ? "/logos/logo_blue.png" : "/logos/logo_white.png"}
+              src={scrolled ? "/logos/logo_Blue.png" : "/logos/logo_white.png"}
               alt="Aizentra Labs Logo"
               fill
               className="object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-200"
