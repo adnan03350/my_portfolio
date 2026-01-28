@@ -26,25 +26,8 @@ export default function Navbar() {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 20;
       setScrolled(isScrolled);
-
-      // Animate logo switch
-      if (logoRef.current) {
-        gsap.to(logoRef.current, {
-          opacity: 0,
-          scale: 0.8,
-          duration: 0.2,
-          onComplete: () => {
-            // Logo will switch via src change in render
-            gsap.fromTo(
-              logoRef.current,
-              { opacity: 0, scale: 0.8 },
-              { opacity: 1, scale: 1, duration: 0.3 }
-            );
-          },
-        });
-      }
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -64,20 +47,16 @@ export default function Navbar() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <motion.div
-            ref={logoRef}
-            className="relative w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 xl:w-32 xl:h-32"
-            whileHover={{ rotate: [0, -10, 10, -10, 0] }}
-            transition={{ duration: 0.5 }}
-          >
+          <div className="relative w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 xl:w-32 xl:h-32">
             <Image
               src={scrolled ? "/logos/logo_blue.png" : "/logos/logo_white.png"}
               alt="Aizentra Labs Logo"
               fill
-              className="object-contain opacity-90 group-hover:opacity-100 transition-opacity"
+              className="object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-200"
               priority
+              key={scrolled ? "blue" : "white"}
             />
-          </motion.div>
+          </div>
           <div className="hidden sm:block">
             <div className="text-lg sm:text-xl font-bold gradient-text">Adnan Hameed</div>
             <div className="text-xs text-gray-400">Aizentra Labs</div>

@@ -63,10 +63,10 @@ export default function Testimonials() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="max-w-6xl mx-auto"
         >
           <motion.h2
@@ -92,7 +92,7 @@ export default function Testimonials() {
                     y: index === currentIndex ? 0 : 50,
                     zIndex: index === currentIndex ? 10 : 1,
                   }}
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 0.3 }}
                   className={`absolute inset-0 flex items-center justify-center ${
                     index === currentIndex ? "pointer-events-auto" : "pointer-events-none"
                   }`}
@@ -108,7 +108,7 @@ export default function Testimonials() {
                       <motion.div
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: 0.2 }}
+                        transition={{ delay: 0.1 }}
                         className="mb-6"
                       >
                         <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-400/20 border border-purple-400/30">
@@ -126,7 +126,7 @@ export default function Testimonials() {
                       <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.3 }}
+                        transition={{ delay: 0.15 }}
                         className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed mb-6 sm:mb-8 italic"
                       >
                         &ldquo;{testimonial.text}&rdquo;
@@ -136,7 +136,7 @@ export default function Testimonials() {
                       <motion.div
                         initial={{ opacity: 0, scaleX: 0 }}
                         animate={{ opacity: 1, scaleX: 1 }}
-                        transition={{ delay: 0.4, duration: 0.5 }}
+                        transition={{ delay: 0.2, duration: 0.3 }}
                         className="w-24 h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent mx-auto mb-6"
                       />
 
@@ -144,7 +144,7 @@ export default function Testimonials() {
                       <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.5 }}
+                        transition={{ delay: 0.25 }}
                         className="flex flex-col sm:flex-row items-center justify-center gap-4"
                       >
                         <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-2 border-cyan-400/50">

@@ -132,10 +132,10 @@ export default function Projects() {
     <section id="projects" ref={sectionRef} className="py-12 lg:py-16 relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="max-w-7xl mx-auto"
         >
           <motion.h2
@@ -161,10 +161,10 @@ export default function Projects() {
             {projects.map((project, index) => (
               <TiltCard key={project.title} intensity={10}>
                 <motion.div
-                  initial={{ opacity: 0, y: 50 }}
+                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, delay: index * 0.05, ease: "easeOut" }}
                   className="glass rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/50 transition-all duration-300 relative group"
                   style={{
                     boxShadow: "0 8px 32px rgba(0, 0, 0, 0.3)",
@@ -216,7 +216,7 @@ export default function Projects() {
                           initial={{ opacity: 0, x: -20 }}
                           whileInView={{ opacity: 1, x: 0 }}
                           viewport={{ once: true }}
-                          transition={{ delay: 0.4 }}
+                          transition={{ delay: 0.15 }}
                         >
                           <h4 className="text-sm sm:text-base font-semibold text-cyan-400 mb-1.5 sm:mb-2 flex items-center gap-2">
                             <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse" />
@@ -242,7 +242,7 @@ export default function Projects() {
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.6 + techIndex * 0.05 }}
+                                transition={{ delay: 0.3 + techIndex * 0.02 }}
                                 whileHover={{ scale: 1.1, backgroundColor: "rgba(255, 255, 255, 0.1)" }}
                                 className="px-2 py-1 bg-white/5 rounded-full text-xs text-gray-300 border border-white/10 hover:border-cyan-400/50 transition-all cursor-default"
                               >
@@ -256,7 +256,7 @@ export default function Projects() {
                           initial={{ opacity: 0, x: -20 }}
                           whileInView={{ opacity: 1, x: 0 }}
                           viewport={{ once: true }}
-                          transition={{ delay: 0.6 }}
+                          transition={{ delay: 0.25 }}
                         >
                           <h4 className="text-sm sm:text-base font-semibold text-green-400 mb-1.5 sm:mb-2 flex items-center gap-2">
                             <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />

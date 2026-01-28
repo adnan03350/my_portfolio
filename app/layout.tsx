@@ -24,6 +24,16 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} bg-gray-950 text-gray-100 antialiased`}>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Optimize animations for mobile
+              if (window.matchMedia('(max-width: 768px)').matches) {
+                document.documentElement.style.setProperty('--animation-duration', '0.5s');
+              }
+            `,
+          }}
+        />
         {children}
       </body>
     </html>

@@ -33,9 +33,9 @@ export default function Hero() {
             opacity: 1,
             y: 0,
             filter: "blur(0px)",
-            duration: 1,
-            delay: i * 0.1,
-            ease: "power3.out",
+            duration: 0.6,
+            delay: i * 0.05,
+            ease: "power2.out",
           }
         );
       });
@@ -46,7 +46,7 @@ export default function Hero() {
       gsap.fromTo(
         subtextRef.current,
         { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 1, delay: 0.8, ease: "power2.out" }
+        { opacity: 1, y: 0, duration: 0.6, delay: 0.4, ease: "power2.out" }
       );
     }
 

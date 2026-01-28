@@ -32,10 +32,10 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Profile Image */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
+              initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
               className="relative order-2 md:order-1"
             >
               <div className="relative w-full aspect-square max-w-md mx-auto">
@@ -69,10 +69,10 @@ export default function About() {
 
             {/* Content */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
+              initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
               className="space-y-6 order-1 md:order-2"
             >
               <motion.div
